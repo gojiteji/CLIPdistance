@@ -52,7 +52,7 @@ for i in range(0,len(cleaned_prompts),batch_size):
   
   
   
-  embs=torch.tensor([])
+embs=torch.tensor([])
 for i in range(0,len(cleaned_prompts),batch_size):
   embs=torch.cat([embs,torch.load(str(i))])
 embs=embs.to("cpu")
